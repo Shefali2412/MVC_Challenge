@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Feed</title>
+</head>
+<body>
+    <h2>welcome To Facebook</h2>
+    <h4>Add a Post</h4>
+
+    <form action="/addfeed" method="post">
+        <input type="text" name="name" placeholder="Name">
+        
+       
+        <textarea name="message" placeholder="Message"></textarea>
+        
+        
+            
+     
+
+        <button type="submit" class="btn btn-primary">Submit</button>
+
+        <% for (let i = 0; i < feeds.length; i++) { %>
+            <div>
+                <h2> <%= feeds[i].name %> </h2>
+                <p>  <%= feeds[i].message.slice(0,10) %></p>
+                <p> <%= feeds[i].create_at %></p>
+                <a href="/fullFeed/<%= feeds[i]._id %>">see more</a>
+            </div>
+    
+            <% }%>
+
+
+</body>
+</html>

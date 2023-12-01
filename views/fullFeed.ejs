@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>One Feed</title>
+</head>
+<body>
+
+    <div>
+        <h2> <%= feeds.name %> </h2>
+        <p> <%= feeds.message %></p>
+        <p> <%= feeds.create_at %></p>
+       
+    </div>
+
+    <button class="btn btn-primary" id="update"><a href=/editFeed/<%= feeds._id %>> Update</a></button>
+    <button class="btn btn-primary" id="delete"><a href=/deleteFeed/<%= feeds._id %>>Delete</a></button>
+
+
+
+    
+</body>
+</html>
